@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
+    text-decoration: none;
 }
 
 .container{
@@ -12,7 +12,7 @@
     height: 100vh;
     background-color: red;
     margin: 0 auto;
-    @include flex(row, center, flex-start);
+    @include flex(column, space-between, center);
     padding: 1vw;
 }
 .game-container{
@@ -40,9 +40,26 @@
     width: 25vw;
     height: 100%;
     @include flex(row, center, center);
+    .wordbox__letter{
+        margin-right: .3vw;
+        font-size: 5vh;
+        font-weight: bold;
+    }
+}
+.letter-container{
+    width: 100%;
+    height: 20vh;
+    background: blue;
+    overflow: hidden;
+    padding: .4vw;
+    @include flex(row, center, center);
+    flex-wrap: wrap;
 }
 .letter{
-    margin-right: .3vw;
-    font-size: 5vh;
+    padding: 1vw;
+    border-radius: 50%;
+    background: yellow;
+    font-size: .8vw;
     font-weight: bold;
+    margin-right: .3vw;
 }
