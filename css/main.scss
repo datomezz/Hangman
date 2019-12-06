@@ -6,11 +6,13 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+.body{
+    background-color: #b2bec3;
+}
 .container{
     width: 90vw;
     height: 100vh;
-    background-color: red;
+
     margin: 0 auto;
     @include flex(column, space-between, center);
     padding: 1vw;
@@ -18,20 +20,21 @@
 .game-container{
     width: 50vw;
     height: 70vh;
-    background: blue;
+    background: #6c5ce7;
     @include flex(row, space-between, flex-start);
     padding: 1vw;
+    border-radius: 15px;
 }
 
 .chance{
     width: 25vw;
     height: 100%;
-    background: yellow;
+    background: #00b894;
     @include flex(column, space-between, flex-start);
-    .chance__block{
+    .chance__picture{
         width: 100%;
-        height: 32%;
-        background: red;
+        height: 100%;
+        background: #0984e3;
         @include flex(row, center, center);
         font-size: 5vh;
     }
@@ -41,6 +44,7 @@
     height: 100%;
     @include flex(row, center, center);
     .wordbox__letter{
+        display: none;
         margin-right: .3vw;
         font-size: 5vh;
         font-weight: bold;
@@ -49,7 +53,7 @@
 .letter-container{
     width: 100%;
     height: 20vh;
-    background: blue;
+    background: #6c5ce7;
     overflow: hidden;
     padding: .4vw;
     @include flex(row, center, center);
@@ -58,7 +62,7 @@
 .letter{
     padding: 1vw;
     border-radius: 50%;
-    background: yellow;
+    background: #00b894;
     font-size: .8vw;
     font-weight: bold;
     margin-right: .3vw;

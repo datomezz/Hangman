@@ -6,10 +6,13 @@
   text-decoration: none;
 }
 
+.body {
+  background-color: #b2bec3;
+}
+
 .container {
   width: 90vw;
   height: 100vh;
-  background-color: red;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,7 +33,7 @@
 .game-container {
   width: 50vw;
   height: 70vh;
-  background: blue;
+  background: #6c5ce7;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,12 +48,13 @@
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 1vw;
+  border-radius: 15px;
 }
 
 .chance {
   width: 25vw;
   height: 100%;
-  background: yellow;
+  background: #00b894;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,10 +70,10 @@
           align-items: flex-start;
 }
 
-.chance .chance__block {
+.chance .chance__picture {
   width: 100%;
-  height: 32%;
-  background: red;
+  height: 100%;
+  background: #0984e3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,6 +109,7 @@
 }
 
 .wordbox .wordbox__letter {
+  display: none;
   margin-right: .3vw;
   font-size: 5vh;
   font-weight: bold;
@@ -113,7 +118,7 @@
 .letter-container {
   width: 100%;
   height: 20vh;
-  background: blue;
+  background: #6c5ce7;
   overflow: hidden;
   padding: .4vw;
   display: -webkit-box;
@@ -136,7 +141,7 @@
 .letter {
   padding: 1vw;
   border-radius: 50%;
-  background: yellow;
+  background: #00b894;
   font-size: .8vw;
   font-weight: bold;
   margin-right: .3vw;
