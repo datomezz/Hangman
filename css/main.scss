@@ -60,10 +60,39 @@
     flex-wrap: wrap;
 }
 .letter{
-    padding: 1vw;
+    padding: 2.7vh;
     border-radius: 50%;
-    background: #00b894;
+    background: #b2bec3;
     font-size: .8vw;
     font-weight: bold;
     margin-right: .3vw;
+    @include flex(row, center, center);
+    color: #000;
+    transition: .2s ease;
+    &:hover{
+        color: #fff;
+        background: #008a6e;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .container{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .game-container{
+        width: 100% !important;
+    }
+    .chance{
+        width: 45% !important;
+    }
+    .wordbox{
+        width: 45% !important;
+    }
+    .letter-container{
+        margin-top: 4vh !important;
+    }
+    .letter{
+        font-size: 3vh;
+    }
 }

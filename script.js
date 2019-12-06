@@ -30,9 +30,12 @@ for(let i = 0; i < alphabet.length; i++){
         checkLose();
         let letter = alphabet[i];
         document.querySelectorAll(".letter")[i].style.backgroundColor = "red";
+        document.querySelectorAll(".letter")[i].style.color = "#fff";
         for(let c = 0; c < hideWord.length; c++){
             if(letter === hideWord.charAt(c)){
                 underline[c].innerText = hideWord.charAt(c);
+                document.querySelectorAll(".letter")[i].style.backgroundColor = "#59e93c";
+                document.querySelectorAll(".letter")[i].style.color = "#000";
                 miss--;
             }
         }
@@ -43,7 +46,7 @@ for(let i = 0; i < alphabet.length; i++){
 }
 
 function checkLose(){
-    if(miss >= 3){
+    if(miss > 3){
         document.documentElement.style.pointerEvents = "none";
         alert("You Lose !");
         setInterval(function(){
