@@ -28,6 +28,7 @@ console.log(hideWord.charAt(0));
 for(let i = 0; i < alphabet.length; i++){
     function letter(i){
         checkLose();
+
         let letter = alphabet[i];
         document.querySelectorAll(".letter")[i].style.backgroundColor = "red";
         document.querySelectorAll(".letter")[i].style.color = "#fff";
@@ -40,6 +41,7 @@ for(let i = 0; i < alphabet.length; i++){
             }
         }
         miss++;
+        checkWin();
         pictureChange();
         console.log(miss);
     }
@@ -52,6 +54,21 @@ function checkLose(){
         setInterval(function(){
             window.location.href = "https://datomezz.github.io/Hangman/";
            }, 5000);
+    
+        }
+}
+
+function checkWin(){
+    let wordCheck = new String();
+    for(let i = 0; i < hideWord.length; i++){
+        wordCheck += underline[i].innerText;
+    }
+    if(wordCheck === hideWord){
+        document.documentElement.style.pointerEvents = "none";
+        alert("You Win !");
+        setInterval(function(){
+            window.location.href = "https://datomezz.github.io/Hangman/";
+        }, 5000);
     
     }
 }
