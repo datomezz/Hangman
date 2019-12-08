@@ -25,13 +25,13 @@ for(let i = 0; i < hideWord.length; i ++){
     underline[i].style.display = "flex";
 }
 
-for(let i = 0; i < hideWord.length; i++){
-    let newDiv = document.createElement("p");
-    let txt = document.createTextNode("_");
-    newDiv.appendChild(txt);
-    newDiv.className = "wordbox__letter";
-    wordBox.appendChild(newDiv);
-}
+// for(let i = 0; i < hideWord.length; i++){
+//     let newDiv = document.createElement("p");
+//     let txt = document.createTextNode("_");
+//     newDiv.appendChild(txt);
+//     newDiv.className = "wordbox__letter";
+//     wordBox.appendChild(newDiv);
+// }
 
 for(let i = 0; i < alphabet.length; i++){
     function letter(i){
