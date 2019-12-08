@@ -1,12 +1,11 @@
 let wordBox = document.querySelector(".wordbox");
 let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 let underline = document.querySelectorAll(".wordbox__letter");
-let miss = 0;
 let stick = ["img/hangman_1.png", "img/hangman_2.png", "img/hangman_3.png", "img/hangman_4.png"];
 let picture = document.querySelector(".chance__picture");
 let numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
-console.log(stick);
+let miss = 0;
 
 let hideWord = prompt("sheiyvanet saxeli");
 
@@ -20,21 +19,19 @@ hideWord = hideWord.replace(/\s/g, "");
 for(let i = 0; i < numbers.length; i++){
     var regex = new RegExp(numbers[i], 'g');
     hideWord = hideWord.replace(regex, "");
-    console.log(hideWord, "regx");
 }
 
 for(let i = 0; i < hideWord.length; i ++){
     underline[i].style.display = "flex";
 }
 
-console.log(hideWord.charAt(0));
-// for(let i = 0; i < hideWord.length; i++){
-//     let newDiv = document.createElement("p");
-//     let txt = document.createTextNode("_");
-//     newDiv.appendChild(txt);
-//     newDiv.className = "wordbox__letter";
-//     wordBox.appendChild(newDiv);
-// }
+for(let i = 0; i < hideWord.length; i++){
+    let newDiv = document.createElement("p");
+    let txt = document.createTextNode("_");
+    newDiv.appendChild(txt);
+    newDiv.className = "wordbox__letter";
+    wordBox.appendChild(newDiv);
+}
 
 for(let i = 0; i < alphabet.length; i++){
     function letter(i){
